@@ -1,0 +1,55 @@
+version: "3.9"
+
+services:
+  backend:
+    container_name: appdesk-backend-dev
+    command: python src/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./backend/src:/app/src
+      - ./backend:/app
+    environment:
+      DEBUG: "1"
+    ports:
+      - "8000:8000"
+
+  frontend:
+    container_name: appdesk-frontend-dev
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    command: npm run dev
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - "5173:5173"
+    environment:
+      VITE_BACKEND_URL: "http://localhost:8000"
+    depends_on:
+      - backend
+
+  postgres:
+    ports:
+      - "5432:5432"
+
+  redis:
+    ports:
+      - "6379:6379"
+
+  celery:
+    container_name: appdesk-celery-dev
+    command: celery -A src worker --loglevel=DEBUG
+    volumes:
+      - ./backend/src:/app/src
+      - ./backend:/app
+
+  celery_beat:
+    container_name: appdesk-celery-beat-dev
+    command: celery -A src beat --loglevel=DEBUG
+    volumes:
+      - ./backend/src:/app/src
+      - ./backend:/app
+
+  flower:
+    ports:
+      - "5555:5555"
