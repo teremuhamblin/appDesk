@@ -1,10 +1,11 @@
-Major Hamblin, voici un README.md simple, propre et professionnel pour ton dossier src/ du backend appDesk.  
-Format minimal, clair, prêt à coller dans ton repo.
+###### README.md >> markdown
+- simple, propre et professionnel pour ton dossier src/ du backend appDesk.  
+(Format minimal, clair et prêt)
 
 ---
 
-📁 src/ — Backend appDesk
-
+# 📁 src/
+> Backend appDesk
 Le dossier src/ contient l’ensemble du code source du backend d’appDesk.  
 Il regroupe les modules principaux de l’API, la configuration du projet, les modèles, les vues, les routes et la logique métier.
 
