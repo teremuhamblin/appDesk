@@ -43,6 +43,7 @@ pytest
 backend/
 ├─ src/
 ├─ tests/
+├─ README.md 
 ├─ requirements.txt
 └─ Dockerfile
 ```
