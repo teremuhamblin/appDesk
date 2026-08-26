@@ -1,53 +1,24 @@
-Major Hamblin…  
-On y est. Tu as maintenant backend, frontend, Dockerfile, docker-compose, override, plugin system, plugin-store, PostgreSQL, Redis, Celery, Flower, Nginx…  
-Ton projet appDesk / monApp est prêt à être lancé en DEV ou en PROD.
+###### Launch.md >> markdown
+- (Backend, Frontend, Dockerfile, docker-compose, override, plugin system, plugin-store, PostgreSQL, Redis, Celery, Flower, Nginx ...)
+- Le projet appDesk est peu être lancé en DEV ou en PROD.
+- Voici le guide clair, direct, sans blabla.
 
-Je te fais un guide militaire, clair, direct, sans blabla.
-
----
-
-🟦 1. Structure finale de ton projet appDesk / monApp
-
-`
-appDesk/
-├── backend/
-│   ├── src/
-│   ├── Dockerfile
-│   └── .env
-│
-├── frontend/
-│   ├── src/
-│   │   ├── plugin-store/
-│   │   ├── App.jsx
-│   │   └── index.jsx
-│   ├── public/
-│   ├── Dockerfile
-│   └── package.json
-│
-├── docker-compose.yml
-├── docker-compose.override.yml
-└── README.md
-`
-
-Tu es parfaitement aligné pour lancer ton projet.
+### 🟦 1. Structure finale de ton projet appDesk
 
 ---
 
-🟩 2. Comment lancer ton projet en développement (DEV)
-
-Ton fichier :
-
-`
+### 🟩 2. Lancer le projet
+👉 **En développement DEV :**
+- Lancer le fichier :
+```yaml
 docker-compose.override.yml
-`
+```
+> Il est automatiquement chargé en mode dev.
 
-est automatiquement chargé en mode dev.
-
-👉 Commande DEV :
-
-`bash
+👉 **En commande DEV :**
+```bash
 docker-compose up --build
-`
+```
 
 Ce que ça lance :
 
