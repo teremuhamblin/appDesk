@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "Support / Questions"
+    url: "https://github.com/teremuhamblin/appDesk/discussions"
+    about: "Pose tes questions ici."
