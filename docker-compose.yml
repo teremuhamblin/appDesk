@@ -1,0 +1,95 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: appdesk-backend
+    command: python src/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./backend/src:/app/src
+    env_file:
+      - ./backend/.env
+    depends_on:
+      - postgres
+      - redis
+    ports:
+      - "8000:8000"
+    networks:
+      - appdesk-net
+
+  postgres:
+    image: postgres:15
+    container_name: appdesk-postgres
+    restart: always
+    environment:
+      POSTGRES_DB: appdesk
+      POSTGRES_USER: appdesk_user
+      POSTGRES_PASSWORD: appdesk_pass
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - appdesk-net
+
+  redis:
+    image: redis:7
+    container_name: appdesk-redis
+    restart: always
+    ports:
+      - "6379:6379"
+    networks:
+      - appdesk-net
+
+  celery:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: appdesk-celery
+    command: celery -A src worker --loglevel=INFO
+    volumes:
+      - ./backend/src:/app/src
+    env_file:
+      - ./backend/.env
+    depends_on:
+      - backend
+      - redis
+    networks:
+      - appdesk-net
+
+  celery_beat:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: appdesk-celery-beat
+    command: celery -A src beat --loglevel=INFO
+    volumes:
+      - ./backend/src:/app/src
+    env_file:
+      - ./backend/.env
+    depends_on:
+      - backend
+      - redis
+    networks:
+      - appdesk-net
+
+  flower:
+    image: mher/flower:latest
+    container_name: appdesk-flower
+    command: flower --broker=redis://redis:6379/0
+    ports:
+      - "5555:5555"
+    depends_on:
+      - redis
+      - celery
+    networks:
+      - appdesk-net
+
+volumes:
+  postgres_data:
+
+networks:
+  appdesk-net:
+    driver: bridge
