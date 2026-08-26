@@ -27,6 +27,58 @@ Il regroupe les modules principaux de l’API, la configuration du projet, les m
 - authentification et permissions,  
 - intégration des modules internes.
 
+```text
+src/
+├─ config/
+│  ├─ __init__.py
+│  ├─ settings.py
+│  ├─ urls.py
+│  ├─ wsgi.py
+│  └─ asgi.py
+│
+├─ core/
+│  ├─ __init__.py
+│  ├─ exceptions.py
+│  ├─ middleware.py
+│  └─ utils.py
+│
+├─ tickets/
+│  ├─ __init__.py
+│  ├─ models.py
+│  ├─ serializers.py
+│  ├─ views.py
+│  └─ urls.py
+│
+├─ inventory/
+│  ├─ __init__.py
+│  ├─ models.py
+│  ├─ serializers.py
+│  ├─ views.py
+│  └─ urls.py
+│
+├─ users/
+│  ├─ __init__.py
+│  ├─ models.py
+│  ├─ serializers.py
+│  ├─ views.py
+│  └─ urls.py
+│
+├─ knowledge/
+│  ├─ __init__.py
+│  ├─ models.py
+│  ├─ serializers.py
+│  ├─ views.py
+│  └─ urls.py
+│
+├─ notifications/
+│  ├─ __init__.py
+│  ├─ email.py
+│  ├─ webhook.py
+│  └─ service.py
+│
+└─ __init__.py
+```
+
 ###🚀 Démarrage (depuis la racine backend)
 ```python
 python manage.py runserver
