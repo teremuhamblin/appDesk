@@ -7,15 +7,17 @@ un système open source de gestion de tickets, d’actifs, d’utilisateurs et d
 connaissances, inspiré de GLPI mais conçu pour être plus moderne, modulaire et léger.
 
 La documentation est organisée pour couvrir tous les aspects du projet :
+```md
 architecture, installation, API, développement, exploitation et maintenance.
+```
 
 ---
 
-## 📁 Structure du dossier `docs/`
-
-- **architecture.md**  
-  Description complète de l’architecture backend, frontend, base de données, 
-  services Docker, flux internes, modules, et logique métier.
+### 📁 Structure du dossier
+> `Docs/`
+   - **architecture.md**  
+***Description complète de l’architecture backend, frontend, base de données, 
+services Docker, flux internes, modules, et logique métier.***
 
 - **install_guide.md**  
   Guide d’installation détaillé : prérequis, configuration, variables d’environnement, 
