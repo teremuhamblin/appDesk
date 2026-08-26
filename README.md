@@ -8,17 +8,18 @@ inspiré de GLPI, conçu pour être simple à déployer et à étendre.
 ### Structure du projet
 ```text
 appDesk/
-├─ backend/
+├─ .github/ . /
+├─ Backend/
 │  ├─ src/
 │  ├─ tests/
 │  ├─ requirements.txt  # si Python/Django
 │  └─ Dockerfile
-├─ frontend/
+├─ Frontend/
 │  ├─ src/
 │  ├─ public/
 │  ├─ package.json      # si React/Vue
 │  └─ Dockerfile
-├─ docs/
+├─ Docs/
 │  ├─ architecture.md
 │  ├─ api_reference.md
 │  └─ install_guide.md
