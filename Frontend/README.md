@@ -39,6 +39,7 @@ npm run build
 frontend/
 ├─ src/
 ├─ public/
+├─ README.md 
 ├─ package.json
 └─ Dockerfile
 ```
