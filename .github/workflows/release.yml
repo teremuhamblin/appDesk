@@ -5,6 +5,9 @@ on:
     tags:
       - "v*.*.*"
 
+permissions:
+  contents: write
+
 jobs:
   build-release:
     runs-on: ubuntu-latest
@@ -13,15 +16,29 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Set up Docker
+        uses: docker/setup-buildx-action@v3
+
       - name: Build backend Docker image
         run: docker build -t appdesk-backend ./backend
 
       - name: Build frontend Docker image
         run: docker build -t appdesk-frontend ./frontend
 
+      - name: Build frontend dist
+        run: |
+          cd frontend
+          npm ci
+          npm run build
+          cd ..
+
+      - name: Prepare release artifacts
+        run: |
+          mkdir -p release
+          cp -r frontend/dist release/frontend-dist
+          cp -r backend/src release/backend-src
+
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          files: |
-            backend/dist/*
-            frontend/dist/*
+          files: release/**
