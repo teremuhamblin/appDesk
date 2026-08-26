@@ -1,9 +1,8 @@
 ###### README.md >> markdown 
 # appDesk
 > Documentation Technique & Fonctionnelle
-
-Ce dossier contient l’ensemble de la documentation officielle du projet **appDesk**, 
-un système open source de gestion de tickets, d’actifs, d’utilisateurs et de 
+- Ce dossier contient l’ensemble de la documentation officielle du projet **appDesk**.
+   - Un système open source de gestion de tickets, d’actifs, d’utilisateurs et de 
 connaissances, inspiré de GLPI mais conçu pour être plus moderne, modulaire et léger.
 
 La documentation est organisée pour couvrir tous les aspects du projet :
@@ -26,19 +25,29 @@ architecture, installation, API, développement, exploitation et maintenance.
 ```
 
    - **api_reference.md**  
+```text
 ***Documentation de l’API REST : endpoints, méthodes, schémas JSON, codes de retour, authentification, pagination, filtres, exemples de requêtes.***
+```
 
    - **user_guide.rst**  
+```text
 ***Manuel utilisateur : création de tickets, consultation du parc, recherche, notifications, base de connaissances.***
+```
 
    - **operator_manual.rst**  
+```text
 ***Manuel opérateur / technicien : gestion des tickets, assignation, suivi, actions rapides, outils internes.***
+```
 
    - **rust_dev_guide.rst**  
+```text
 ***Guide de développement Rust (si modules Rust intégrés) : structure, compilation, intégration, bonnes pratiques.***
+```
 
    - **internal_compilation.rst**  
+```text
 ***Documentation interne pour la compilation, le packaging, les workflows CI/CD, les environnements de build.***
+```
 
 ```text
 docs/
@@ -73,22 +82,18 @@ docs/
 
 ---
 
-## 📄 Formats utilisés
-
-- `.md` pour la documentation générale  
+### 📄 Formats utilisés
+- `.md` pour la documentation générale
 - `.rst` pour les guides techniques avancés (compatibles Sphinx)  
 - Possibilité d’étendre vers MkDocs ou ReadTheDocs
 
 ---
 
-## 🔗 Contribution
-
-Toute amélioration de la documentation est bienvenue.  
-Les contributions doivent respecter la structure existante et maintenir une 
-cohérence technique et stylistique.
+### 🔗 Contribution
+- Toute amélioration de la documentation est bienvenue.  
+- Les contributions doivent respecter la structure existante et maintenir une cohérence technique et stylistique.
 
 ---
 
-## 📜 Licence
-
+### 📜 Licence
 La documentation appDesk est distribuée sous licence **MIT**, comme le projet principal.
