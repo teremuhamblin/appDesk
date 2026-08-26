@@ -1,0 +1,25 @@
+name: "Feature Request"
+description: "Proposer une nouvelle fonctionnalité pour appDesk"
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: "Résumé"
+      placeholder: "Décris la fonctionnalité souhaitée."
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: "Motivation"
+      placeholder: "Pourquoi cette fonctionnalité est utile ?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation
+    attributes:
+      label: "Idée d’implémentation"
+      placeholder: "Comment cela pourrait être réalisé ?"
