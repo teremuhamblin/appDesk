@@ -28,3 +28,23 @@ npm install
 # Lancer le serveur de dev
 npm run dev
 ```
+
+### Build
+```bash
+npm run build
+```
+
+### Structure
+```text
+frontend/
+├─ src/
+├─ public/
+├─ package.json
+└─ Dockerfile
+```
+
+### Licence
+Ce module frontend est distribué
+
+
+
