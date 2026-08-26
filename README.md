@@ -30,6 +30,7 @@ appDesk/
     ├─ operator_manual.rst
     └─ internal_compilation.rst
 ├─ docker-compose.yml
+├─ docker-compose.override.yml
 ├─ LICENSE
 └─ README.md
 ```
