@@ -1,0 +1,31 @@
+name: "Contributing Guide"
+description: "Guide pour contribuer efficacement au projet appDesk."
+
+workflow:
+  steps:
+    - "Fork du dépôt."
+    - "Créer une branche dédiée : feature/ma-fonction ou fix/mon-bug."
+    - "Commits clairs et structurés (convention type : feat:, fix:, docs:, test:)."
+    - "Pousser la branche et ouvrir une Pull Request."
+
+requirements:
+  code_style:
+    - "Respect du style Python (black, isort, flake8)."
+    - "Tests obligatoires pour les nouvelles fonctionnalités."
+    - "Documentation mise à jour si nécessaire."
+
+  environment:
+    - "Utiliser Docker + docker-compose pour reproduire l’environnement."
+    - "Installer les dépendances via requirements.txt."
+
+pull_requests:
+  must_include:
+    - "Description claire du changement."
+    - "Liste des fichiers modifiés."
+    - "Tests associés."
+    - "Issue liée (si applicable)."
+
+communication:
+  channels:
+    - "Issues GitHub pour les bugs."
+    - "Discussions GitHub pour les idées et améliorations."
