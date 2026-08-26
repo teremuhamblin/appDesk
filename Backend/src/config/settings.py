@@ -52,3 +52,5 @@ DATABASES = {
 }
 
 STATIC_URL = "/static/"
+
+INSTALLED_APPS += ["plugins.loader.PluginLoader"]
