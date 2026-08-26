@@ -1,32 +1,44 @@
 # ============================
-#   appDesk Frontend - Dockerfile
+#   appDesk Frontend - Dockerfile Optimisé
 #   Vite + React + Nginx
 # ============================
 
-# --- Build stage ---
+########## BUILD STAGE ##########
 FROM node:20-slim AS build
+
+# Réduction de taille + optimisation réseau
+ENV NODE_ENV=production
+ENV CI=true
 
 WORKDIR /app
 
-# Installer dépendances
-COPY package.json .
-COPY package-lock.json .
-RUN npm install
+# Cache intelligent pour npm install
+COPY package.json package-lock.json ./
+RUN npm ci --prefer-offline --no-audit --no-fund
 
-# Copier le code
+# Copier le code source
 COPY . .
 
-# Build Vite
+# Build Vite (sortie dans /app/dist)
 RUN npm run build
 
-# --- Production stage ---
-FROM nginx:1.25-alpine
+
+########## PRODUCTION STAGE ##########
+FROM nginx:1.25-alpine AS production
+
+# Nettoyage + sécurité minimale
+RUN rm -rf /var/cache/apk/* \
+    && adduser -D -g '' appdesk \
+    && mkdir -p /usr/share/nginx/html \
+    && chown -R appdesk:appdesk /usr/share/nginx/html
 
 # Copier le build dans nginx
 COPY --from=build /app/dist /usr/share/nginx/html
 
-# Copier config nginx si besoin
-# COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Ajouter une config nginx optimisée pour React + API Django
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+USER appdesk
 
 EXPOSE 80
 
