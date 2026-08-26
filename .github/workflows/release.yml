@@ -1,0 +1,27 @@
+name: "Release appDesk"
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build backend Docker image
+        run: docker build -t appdesk-backend ./backend
+
+      - name: Build frontend Docker image
+        run: docker build -t appdesk-frontend ./frontend
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            backend/dist/*
+            frontend/dist/*
