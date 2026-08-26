@@ -1,0 +1,23 @@
+name: "Security Policy"
+description: "Procédure de gestion des vulnérabilités pour le projet appDesk."
+
+contact:
+  - type: "email"
+    address: "security@appdesk.local"
+    description: "Contact direct pour signaler une faille de sécurité."
+
+policy:
+  reporting:
+    - "Ne pas créer d’issue publique pour une vulnérabilité."
+    - "Envoyer un rapport détaillé incluant : description, impact, reproduction, logs éventuels."
+    - "Les failles critiques doivent être signalées immédiatement via le contact ci-dessus."
+
+  triage:
+    - "Accusé de réception sous 48h."
+    - "Analyse complète sous 3 à 7 jours."
+    - "Correctif déployé selon la sévérité."
+
+  best_practices:
+    - "Ne jamais commiter de secrets, tokens ou mots de passe."
+    - "Utiliser .env et .gitignore pour protéger les données sensibles."
+    - "Analyser les dépendances régulièrement (safety, bandit)."
