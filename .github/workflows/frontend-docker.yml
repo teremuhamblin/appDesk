@@ -1,0 +1,46 @@
+name: Build Frontend Docker Image
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build-frontend:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build Docker image (frontend)
+        uses: docker/build-push-action@v5
+        with:
+          context: ./frontend
+          file: ./frontend/Dockerfile
+          push: true
+          tags: |
+            ghcr.io/${{ github.repository_owner }}/appdesk-frontend:latest
+            ghcr.io/${{ github.repository_owner }}/appdesk-frontend:${{ github.ref_name }}
+
+      - name: Build Vite dist (sanity check)
+        run: |
+          cd frontend
+          npm ci
+          npm run build
