@@ -1,7 +1,8 @@
 ###### Launch.md >> markdown
 - (Backend, Frontend, Dockerfile, docker-compose, override, plugin system, plugin-store, PostgreSQL, Redis, Celery, Flower, Nginx ...)
 - Le projet appDesk est peu être lancé en DEV ou en PROD.
-- Voici le guide clair, direct, sans blabla.
+
+   - **Voici le guide clair et direct**
 
 ### 🟦 1. Structure finale de ton projet appDesk
 
@@ -13,15 +14,15 @@
 ```yaml
 docker-compose.override.yml
 ```
-> Il est automatiquement chargé en mode dev.
+   - **Il est automatiquement chargé en mode dev.**
 
 👉 **En commande DEV :**
 ```bash
 docker-compose up --build
 ```
 
-Ce que ça lance :
-
+>***Ce que ça lance :***
+```md
 | Service | Mode | Port |
 |--------|------|------|
 | backend Django | hot‑reload | 8000 |
@@ -31,27 +32,36 @@ Ce que ça lance :
 | Celery worker | debug | — |
 | Celery beat | debug | — |
 | Flower | monitoring | 5555 |
-
-URLs DEV :
-
-- Frontend : http://localhost:5173
-- Backend API : http://localhost:8000
-- Plugin API : http://localhost:8000/api/plugins/
-- Flower : http://localhost:5555
-
-Ton plugin-store fonctionne immédiatement.
+```
+>URLs DEV :
+- Frontend :
+```md
+http://localhost:5173
+```
+- Backend API :
+```md
+http://localhost:8000
+```
+- Plugin API :
+```md
+http://localhost:8000/api/plugins/
+```
+- Flower :
+```md
+http://localhost:5555
+```
+   - **Le plugin-store fonctionne immédiatement.**
 
 ---
 
-🟦 3. Comment lancer ton projet en production (PROD)
-
-Ton fichier :
-
-`
+### 🟦 3. Lancer le projet
+👉 **En production PROD :**
+- Lancer le fichier :
+```yaml
 docker-compose.yml
-`
+```
 
-lance la version optimisée :
+   - **Lance la version optimisée :**
 
 - frontend → build Vite → Nginx
 - backend → Django
@@ -60,113 +70,106 @@ lance la version optimisée :
 - Celery
 - Flower
 
-👉 Commande PROD :
-
-`bash
+👉 **En commande PROD :**
+```bash
 docker-compose -f docker-compose.yml up --build -d
-`
+```
 
-URLs PROD :
-
-- Frontend (Nginx) : http://localhost
-- Backend API : http://localhost:8000
-- Plugin API : http://localhost/api/plugins/
-- Flower : http://localhost:5555
+>URLs PROD :
+- Frontend (Nginx) :
+```md
+http://localhost
+```
+- Backend API :
+```md
+http://localhost:8000
+```
+- Plugin API :
+```md
+http://localhost/api/plugins/
+```
+- Flower :
+```md
+http://localhost:5555
+```
 
 ---
 
-🟩 4. Comment lancer ton backend seul (hors Docker)
-
-Si tu veux tester Django sans Docker :
-
-`bash
+### 🟩 4. Comment lancer ton backend seul (hors Docker)
+- Si tu veux tester Django sans Docker :
+```text
 cd backend
 pip install -r requirements.txt
 python src/manage.py migrate
 python src/manage.py runserver
-`
+```
 
 ---
 
-🟦 5. Comment lancer ton frontend seul (hors Docker)
-
-`bash
+### 🟦 5. Comment lancer ton frontend seul (hors Docker)
+```text
 cd frontend
 npm install
 npm run dev
-`
+```
 
-Frontend accessible sur :
-
-`
+- Frontend accessible sur :
+```text
 http://localhost:5173
-`
+```
 
 ---
 
-🟩 6. Comment vérifier que tout fonctionne
+### 🟩 6. Comment vérifier que tout fonctionne
 
 ✔ Backend OK
-`bash
+```bash
 curl http://localhost:8000/api/plugins/list/
-`
+```
 
 ✔ Frontend OK
 Ouvre :  
-`
+```text
 http://localhost:5173
-`
-
-Tu dois voir ton Plugin Store.
+```
+- Tu dois voir ton Plugin Store.
 
 ✔ Plugin install OK
-Dans ton UI plugin-store, mets une URL ZIP de plugin.
+- Dans ton UI plugin-store, mets une URL ZIP de plugin.
 
 ✔ Celery OK
-`bash
+```bash
 docker logs appdesk-celery
-`
+```
 
 ✔ Flower OK
-`
+```text
 http://localhost:5555
-`
+```
 
 ---
 
-🟦 7. Ton workflow militaire pour monApp
-
-DEV :
-`
+### 🟦 7. Workflow militaire pour appDesk
+- DEV :
+```text
 docker-compose up --build
-`
+```
 
-PROD :
-`
+- PROD :
+```text
 docker-compose -f docker-compose.yml up --build -d
-`
+```
 
-Stop :
-`
+- Stop :
+```text
 docker-compose down
-`
+```
 
-Reset DB :
-`
+- Reset DB :
+```text
 docker volume rm appdeskpostgresdata
-`
+```
 
 ---
 
-🟩 Major Hamblin…
-Ton projet monApp / appDesk est maintenant entièrement opérationnel, scalable, modulaire, militaire, production‑ready.
-
-Si tu veux, je peux maintenant te créer :
-
-🔥 Un Makefile militaire pour lancer dev/prod/tests/migrations  
-🔥 Un CI/CD GitHub Actions complet (backend + frontend + Docker build + push)  
-🔥 Un reverse proxy Traefik avec HTTPS auto  
-🔥 Un dashboard SOC pour monitorer tes plugins backend  
-🔥 Un système de logs tactiques LégionOS pour ton backend
-
-Dis-moi ce que tu veux déployer ensuite Major.
+### 🟩 **Pret pour le deploiement**
