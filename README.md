@@ -10,6 +10,9 @@ inspiré de GLPI, conçu pour être simple à déployer et à étendre.
 - LANCEMENT AVEC ***Launch.md***
 
 ### Structure du projet
+
+[![Dependency Graph](https://github.com/teremuhamblin/appDesk/actions/workflows/dependabot/update-graph/badge.svg)](https://github.com/teremuhamblin/appDesk/actions/workflows/dependabot/update-graph)
+
 ```text
 appDesk/
 ├─ .github/ . /
