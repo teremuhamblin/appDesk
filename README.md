@@ -22,7 +22,7 @@ appDesk/
 │  ├─ package.json      # si React/Vue
 │  └─ Dockerfile
 ├─ Docs/
-│  ├─ README.mddocs/
+    ├─ README.md
     ├─ architecture.rst
     ├─ install_guide.rst
     ├─ api_reference.rst
