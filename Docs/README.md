@@ -1,4 +1,6 @@
-# appDesk — Documentation Technique & Fonctionnelle
+###### README.md >> markdown 
+# appDesk
+> Documentation Technique & Fonctionnelle
 
 Ce dossier contient l’ensemble de la documentation officielle du projet **appDesk**, 
 un système open source de gestion de tickets, d’actifs, d’utilisateurs et de 
@@ -38,6 +40,16 @@ architecture, installation, API, développement, exploitation et maintenance.
 - **internal_compilation.rst**  
   Documentation interne pour la compilation, le packaging, les workflows CI/CD, 
   les environnements de build.
+
+```text
+docs/
+├─ architecture.rst
+├─ install_guide.rst
+├─ api_reference.rst
+├─ user_guide.rst
+├─ operator_manual.rst
+└─ internal_compilation.rst
+```
 
 ---
 
