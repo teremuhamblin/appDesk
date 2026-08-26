@@ -1,0 +1,30 @@
+name: "Code of Conduct"
+description: "Règles de conduite pour les contributeurs du projet appDesk."
+
+standards:
+  expected:
+    - "Respect mutuel entre contributeurs."
+    - "Communication claire, professionnelle et constructive."
+    - "Aucune discrimination, harcèlement ou comportement agressif."
+    - "Respect des décisions techniques et du workflow du projet."
+
+  unacceptable:
+    - "Insultes, attaques personnelles ou menaces."
+    - "Spam, publicité ou comportements perturbateurs."
+    - "Publication de données sensibles ou privées."
+    - "Tentatives de sabotage du projet ou de ses outils."
+
+responsibilities:
+  maintainers:
+    - "Appliquer le code de conduite."
+    - "Modérer les discussions si nécessaire."
+    - "Prendre des mesures correctives en cas de violation."
+
+enforcement:
+  process:
+    - "Les violations doivent être signalées via security@appdesk.local."
+    - "Analyse impartiale par les mainteneurs."
+    - "Sanctions possibles : avertissement, blocage, exclusion du projet."
+
+license:
+  reference: "Inspiré du Contributor Covenant v2.1"
