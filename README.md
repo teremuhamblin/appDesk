@@ -12,14 +12,17 @@ appDesk/
 ├─ Backend/
 │  ├─ src/
 │  ├─ tests/
+│  ├─ README.md 
 │  ├─ requirements.txt  # si Python/Django
 │  └─ Dockerfile
 ├─ Frontend/
 │  ├─ src/
 │  ├─ public/
+│  ├─ README.md 
 │  ├─ package.json      # si React/Vue
 │  └─ Dockerfile
 ├─ Docs/
+│  ├─ README.md 
 │  ├─ architecture.md
 │  ├─ api_reference.md
 │  └─ install_guide.md
