@@ -1,16 +1,15 @@
 ###### README.md >> markdown
-- simple, propre et professionnel pour ton dossier src/ du backend appDesk.  
+- simple, propre et professionnel pour ton dossier **src/** du ***backend appDesk.*** 
 (Format minimal, clair et prêt)
 
 ---
 
 # 📁 src/
 > Backend appDesk
-Le dossier src/ contient l’ensemble du code source du backend d’appDesk.  
+Le dossier `src/` contient l’ensemble du code source du backend d’appDesk.  
 Il regroupe les modules principaux de l’API, la configuration du projet, les modèles, les vues, les routes et la logique métier.
 
-📦 Contenu
-
+### 📦 Contenu
 - config/ — configuration Django (settings, urls, wsgi/asgi)  
 - core/ — utilitaires communs, helpers, exceptions, middleware  
 - tickets/ — gestion des tickets (modèles, vues, serializers, routes)  
@@ -20,29 +19,25 @@ Il regroupe les modules principaux de l’API, la configuration du projet, les m
 - notifications/ — système d’envoi (email, webhook)  
 - tests/ — tests unitaires et d’intégration liés au code source
 
-🎯 Rôle du dossier
-
-Ce dossier constitue le cœur du backend :  
+### 🎯 Rôle du dossier
+>Ce dossier constitue le cœur du backend :  
 - définition des modèles de données,  
 - logique métier,  
 - endpoints REST,  
 - authentification et permissions,  
 - intégration des modules internes.
 
-🚀 Démarrage (depuis la racine backend)
-
-`bash
+###🚀 Démarrage (depuis la racine backend)
+```python
 python manage.py runserver
-`
+```
 
-🧪 Tests
-
-`bash
+### 🧪 Tests
+```pyton
 pytest
-`
+```
 
-📜 Licence
-
+### 📜 Licence
 Le code source du dossier src/ est distribué sous licence MIT, comme le projet principal.
 
 ---
