@@ -7,6 +7,8 @@
 appDesk est un logiciel open source de gestion de parc et de tickets,
 inspiré de GLPI, conçu pour être simple à déployer et à étendre.
 
+[![pages-build-deployment](https://github.com/teremuhamblin/appDesk/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/teremuhamblin/appDesk/actions/workflows/pages/pages-build-deployment)
+
 - LANCEMENT AVEC ***Launch.md***
 
 ### Structure du projet
