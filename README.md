@@ -1,6 +1,8 @@
 ###### README.md >> markdown 
 - Logiciel simple similaire a GLPI
 
+[![Deploy static content to Pages](https://github.com/teremuhamblin/appDesk/actions/workflows/static.yml/badge.svg)](https://github.com/teremuhamblin/appDesk/actions/workflows/static.yml)
+
 # appDesk
 appDesk est un logiciel open source de gestion de parc et de tickets,
 inspiré de GLPI, conçu pour être simple à déployer et à étendre.
