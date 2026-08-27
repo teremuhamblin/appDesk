@@ -29,11 +29,11 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build Docker image (frontend)
+      - name: Build Frontend Docker Image
         uses: docker/build-push-action@v5
         with:
-          context: ./frontend
-          file: ./frontend/Dockerfile
+          context: ./Frontend
+          file: ./Frontend/Dockerfile
           push: true
           tags: |
             ghcr.io/${{ github.repository_owner }}/appdesk-frontend:latest
@@ -41,6 +41,6 @@ jobs:
 
       - name: Build Vite dist (sanity check)
         run: |
-          cd frontend
+          cd Frontend
           npm ci
           npm run build
