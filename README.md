@@ -5,6 +5,7 @@
 
 # appDesk
 [![Publish Package](https://github.com/teremuhamblin/appDesk/actions/workflows/publish-test-package.yml/badge.svg)](https://github.com/teremuhamblin/appDesk/actions/workflows/publish-test-package.yml)
+
 appDesk est un logiciel open source de gestion de parc et de tickets,
 inspiré de GLPI, conçu pour être simple à déployer et à étendre.
 
