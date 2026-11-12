@@ -17,35 +17,7 @@ inspiré de GLPI, conçu pour être simple à déployer et à étendre.
 
 [![Dependency Graph](https://github.com/teremuhamblin/appDesk/actions/workflows/dependabot/update-graph/badge.svg)](https://github.com/teremuhamblin/appDesk/actions/workflows/dependabot/update-graph)
 
-```text
-appDesk/
-├─ .github/ . /
-├─ Backend/
-│  ├─ src/
-│  ├─ tests/
-│  ├─ README.md 
-│  ├─ requirements.txt  # si Python/Django
-│  └─ Dockerfile
-├─ Frontend/
-│  ├─ src/
-│  ├─ public/
-│  ├─ README.md 
-│  ├─ package.json      # si React/Vue
-│  └─ Dockerfile
-├─ Docs/
-    ├─ README.md
-    ├─ architecture.rst
-    ├─ install_guide.rst
-    ├─ api_reference.rst
-    ├─ user_guide.rst
-    ├─ operator_manual.rst
-    └─ internal_compilation.rst
-├─ docker-compose.yml
-├─ docker-compose.override.yml
-├─ LICENSE
-├─ Launch.md
-└─ README.md
-```
+- 》》 **VOIR Docs/structure.md**
 
 ### Fonctionnalités
    - Gestion des tickets (création, assignation, suivi)
