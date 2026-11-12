@@ -1,10 +1,13 @@
 ###### Launch.md >> markdown
+```text
 - (Backend, Frontend, Dockerfile, docker-compose, override, plugin system, plugin-store, PostgreSQL, Redis, Celery, Flower, Nginx ...)
 - Le projet appDesk est peu être lancé en DEV ou en PROD.
-
+```
    - **Voici le guide clair et direct**
 
-### 🟦 1. Structure finale de ton projet appDesk
+# appDesk
+### 🟦 1. Structure finale du projet appDesk
+- 》》 ** VOIR Docs/structure.md**
 
 ---
 
@@ -33,19 +36,23 @@ docker-compose up --build
 | Celery beat | debug | — |
 | Flower | monitoring | 5555 |
 ```
+
 >URLs DEV :
 - Frontend :
 ```md
 http://localhost:5173
 ```
+
 - Backend API :
 ```md
 http://localhost:8000
 ```
+
 - Plugin API :
 ```md
 http://localhost:8000/api/plugins/
 ```
+
 - Flower :
 ```md
 http://localhost:5555
@@ -80,14 +87,17 @@ docker-compose -f docker-compose.yml up --build -d
 ```md
 http://localhost
 ```
+
 - Backend API :
 ```md
 http://localhost:8000
 ```
+
 - Plugin API :
 ```md
 http://localhost/api/plugins/
 ```
+
 - Flower :
 ```md
 http://localhost:5555
@@ -96,7 +106,7 @@ http://localhost:5555
 ---
 
 ### 🟩 4. Comment lancer ton backend seul (hors Docker)
-- Si tu veux tester Django sans Docker :
+- Tester Django sans Docker :
 ```text
 cd backend
 pip install -r requirements.txt
@@ -122,27 +132,27 @@ http://localhost:5173
 
 ### 🟩 6. Comment vérifier que tout fonctionne
 
-✔ Backend OK
+✔ **Backend OK**
 ```bash
 curl http://localhost:8000/api/plugins/list/
 ```
 
-✔ Frontend OK
+✔ **Frontend OK**
 Ouvre :  
 ```text
 http://localhost:5173
 ```
 - Tu dois voir ton Plugin Store.
 
-✔ Plugin install OK
+✔ **Plugin install OK**
 - Dans ton UI plugin-store, mets une URL ZIP de plugin.
 
-✔ Celery OK
+✔ **Celery OK**
 ```bash
 docker logs appdesk-celery
 ```
 
-✔ Flower OK
+✔ **Flower OK**
 ```text
 http://localhost:5555
 ```
