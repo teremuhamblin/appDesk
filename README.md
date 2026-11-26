@@ -10,10 +10,15 @@
 Une application open source de helpdesk et de gestion de parc, inspirée de la catégorie d’outils comme GLPI, conçue pour être simple à explorer et à faire évoluer.
 
 [![Licence MIT](https://img.shields.io/badge/Licence-MIT-2563EB?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](./LICENSE)
+
+---
+
 [![Pages](https://github.com/teremuhamblin/appDesk/actions/workflows/static.yml/badge.svg)](https://github.com/teremuhamblin/appDesk/actions/workflows/static.yml)
 [![Backend image](https://github.com/teremuhamblin/appDesk/actions/workflows/backend-docker.yml/badge.svg)](https://github.com/teremuhamblin/appDesk/actions/workflows/backend-docker.yml)
 [![Frontend image](https://github.com/teremuhamblin/appDesk/actions/workflows/frontend-docker.yml/badge.svg)](https://github.com/teremuhamblin/appDesk/actions/workflows/frontend-docker.yml)
 [![CodeQL](https://github.com/teremuhamblin/appDesk/actions/workflows/codeql.yml/badge.svg)](https://github.com/teremuhamblin/appDesk/actions/workflows/codeql.yml)
+
+---
 
 [**✨ Fonctionnalités**](#fonctionnalites) · [**🧭 Parcours**](#parcours) · [**🚀 Démarrage**](#demarrage) · [**🏗️ Architecture**](#architecture) · [**📚 Documentation**](#documentation) · [**🔐 Sécurité**](#securite) · [**🤝 Contribuer**](#contribuer)
 
