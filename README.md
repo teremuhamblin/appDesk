@@ -10,11 +10,12 @@
 Une application open source inspirée des outils de helpdesk comme GLPI, pensée pour rester simple à déployer, comprendre et faire évoluer.
 
 [![Licence MIT](https://img.shields.io/badge/Licence-MIT-2563EB?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](./LICENSE)
-[![Pages](https://github.com/teremuhamblin/appDesk/actions/workflows/static.yml/badge.svg?style=for-the-badge)](https://github.com/teremuhamblin/appDesk/actions/workflows/static.yml)
-[![Package](https://github.com/teremuhamblin/appDesk/actions/workflows/publish-test-package.yml/badge.svg?style=for-the-badge)](https://github.com/teremuhamblin/appDesk/actions/workflows/publish-test-package.yml)
+[![Déploiement Pages](https://github.com/teremuhamblin/appDesk/actions/workflows/static.yml/badge.svg?style=for-the-badge)](https://github.com/teremuhamblin/appDesk/actions/workflows/static.yml)
+[![Publication package](https://github.com/teremuhamblin/appDesk/actions/workflows/publish-test-package.yml/badge.svg?style=for-the-badge)](https://github.com/teremuhamblin/appDesk/actions/workflows/publish-test-package.yml)
+[![Déploiement GitHub Pages](https://github.com/teremuhamblin/appDesk/actions/workflows/pages/pages-build-deployment/badge.svg?style=for-the-badge)](https://github.com/teremuhamblin/appDesk/actions/workflows/pages/pages-build-deployment)
 [![Dépôt GitHub](https://img.shields.io/badge/GitHub-teremuhamblin%2FappDesk-0d1117?style=for-the-badge&logo=github&logoColor=white)](https://github.com/teremuhamblin/appDesk)
 
-[**✨ Fonctionnalités**](#fonctionnalites) · [**🚀 Démarrage**](#demarrage) · [**🏗️ Architecture**](#architecture) · [**📚 Documentation**](#documentation) · [**🔐 Sécurité**](#securite) · [**📄 Licence**](#licence)
+[**✨ Fonctionnalités**](#fonctionnalites) · [**🧭 Parcours**](#parcours) · [**🚀 Démarrage**](#demarrage) · [**🏗️ Architecture**](#architecture) · [**📚 Documentation**](#documentation) · [**🔐 Sécurité**](#securite) · [**🤝 Contribuer**](#contribuer)
 
 </div>
 
@@ -23,7 +24,7 @@ Une application open source inspirée des outils de helpdesk comme GLPI, pensée
 <a id="apropos"></a>
 ## 👋 À propos
 
-**appDesk** est un logiciel open source de gestion de demandes de support et d’actifs informatiques. Il vise à réunir, dans un espace accessible, les échanges entre utilisateurs et équipes IT ainsi que les informations utiles au suivi du parc.
+**appDesk** est un logiciel open source de gestion des demandes de support et des actifs informatiques. Il vise à réunir, dans un espace accessible, les échanges entre utilisateurs et équipes IT ainsi que les informations utiles au suivi du parc.
 
 > [!NOTE]
 > appDesk s’inspire de la catégorie des solutions de helpdesk et de gestion de parc, dont GLPI. Il s’agit d’un projet indépendant, non affilié à GLPI.
@@ -40,7 +41,7 @@ Une application open source inspirée des outils de helpdesk comme GLPI, pensée
 <a id="fonctionnalites"></a>
 ## ✨ Fonctionnalités
 
-| Domaine | Capacités prévues / présentées par le projet |
+| Domaine | Capacités présentées par le projet |
 |:--|:--|
 | 🎫 **Tickets** | Création, assignation et suivi des demandes. |
 | 🖥️ **Inventaire** | Gestion d’actifs tels que machines, logiciels et contrats. |
@@ -77,7 +78,7 @@ flowchart LR
 <a id="architecture"></a>
 ## 🏗️ Architecture — vue logique
 
-Le schéma ci-dessous illustre les composants annoncés dans le dépôt. Les versions et détails précis de la stack sont à confirmer dans les fichiers de configuration et la documentation de déploiement.
+Ce schéma illustre les composants annoncés dans le dépôt. Les versions et détails précis de la stack sont à confirmer dans les fichiers de configuration et la documentation de déploiement.
 
 ```mermaid
 %%{init: {"theme":"base","themeVariables":{"primaryColor":"#EFF6FF","primaryTextColor":"#0F172A","primaryBorderColor":"#2563EB","lineColor":"#64748B","secondaryColor":"#FEE2E2","tertiaryColor":"#DBEAFE","fontFamily":"Arial"}}}%%
@@ -143,7 +144,7 @@ appDesk/
 ├── docker-compose.override.yml
 ├── Launch.md
 ├── LICENSE
-└��─ README.md
+└── README.md
 ```
 
 Pour le détail, consulte [`Docs/structure.md`](./Docs/structure.md).
