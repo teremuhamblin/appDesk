@@ -9,15 +9,28 @@
 **Tickets · Inventaire · Base de connaissances · Rapports**  
 Une application open source inspirée des outils de helpdesk comme GLPI, pensée pour rester simple à déployer, comprendre et faire évoluer.
 
+
+</div>
+
+---
+
 [![Licence MIT](https://img.shields.io/badge/Licence-MIT-2563EB?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](./LICENSE)
-[![Déploiement Pages](https://github.com/teremuhamblin/appDesk/actions/workflows/static.yml/badge.svg?style=for-the-badge)](https://github.com/teremuhamblin/appDesk/actions/workflows/static.yml)
-[![Publication package](https://github.com/teremuhamblin/appDesk/actions/workflows/publish-test-package.yml/badge.svg?style=for-the-badge)](https://github.com/teremuhamblin/appDesk/actions/workflows/publish-test-package.yml)
+
 [![Déploiement GitHub Pages](https://github.com/teremuhamblin/appDesk/actions/workflows/pages/pages-build-deployment/badge.svg?style=for-the-badge)](https://github.com/teremuhamblin/appDesk/actions/workflows/pages/pages-build-deployment)
+
 [![Dépôt GitHub](https://img.shields.io/badge/GitHub-teremuhamblin%2FappDesk-0d1117?style=for-the-badge&logo=github&logoColor=white)](https://github.com/teremuhamblin/appDesk)
+
+---
 
 [**✨ Fonctionnalités**](#fonctionnalites) · [**🧭 Parcours**](#parcours) · [**🚀 Démarrage**](#demarrage) · [**🏗️ Architecture**](#architecture) · [**📚 Documentation**](#documentation) · [**🔐 Sécurité**](#securite) · [**🤝 Contribuer**](#contribuer)
 
 </div>
+
+---
+
+[![Déploiement Pages](https://github.com/teremuhamblin/appDesk/actions/workflows/static.yml/badge.svg?style=for-the-badge)](https://github.com/teremuhamblin/appDesk/actions/workflows/static.yml)
+
+[![Publication package](https://github.com/teremuhamblin/appDesk/actions/workflows/publish-test-package.yml/badge.svg?style=for-the-badge)](https://github.com/teremuhamblin/appDesk/actions/workflows/publish-test-package.yml)
 
 ---
 
